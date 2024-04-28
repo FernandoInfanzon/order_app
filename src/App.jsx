@@ -1,7 +1,6 @@
 import {useState, useEffect} from 'react';
 import Meals from  './components/Meals';
-import logo from './assets/logo.jpg';
-import { ShoppingCartIcon } from "@heroicons/react/24/outline";
+import Header from './components/Header';
 
 function App() {
   const [isFetching, setIsFetching] = useState(false);
@@ -20,13 +19,7 @@ function App() {
 
   return (
     <>
-      <main id='main-header'>
-        <div id='title'>
-          <img src={logo} alt="" />
-          <h1>Meal Planner</h1>
-        </div>
-        <ShoppingCartIcon  className="w-8 h-8" />
-      </main>
+      <Header/>
       <Meals meals={meals}/>
     </>
   );
